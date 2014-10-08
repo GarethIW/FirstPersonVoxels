@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+	    Screen.lockCursor = true;
+
         if(Map.State!=MapState.Loaded) GetComponent<CharacterMotor>().enabled = false;
         else GetComponent<CharacterMotor>().enabled = true;
 	}
