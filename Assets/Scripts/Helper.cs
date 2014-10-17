@@ -25,6 +25,20 @@ public static class Helper
         return new Vector2(endX, endY);
     }
 
+    public static Vector3 PointOnSphere(float r, float theta, float phi)
+    {
+        Vector3 pt = new Vector3();
+        float snt = (float)Math.Sin(theta * Math.PI / 180);
+        float cnt = (float)Math.Cos(theta * Math.PI / 180);
+        float snp = (float)Math.Sin(phi * Math.PI / 180);
+        float cnp = (float)Math.Cos(phi * Math.PI / 180);
+        pt.x = r * snt * cnp;
+        pt.y = r * cnt;
+        pt.z = -r * snt * snp;
+
+        return pt;
+    } 
+
     
 }
 

@@ -29,7 +29,6 @@ namespace Assets.Scripts
         public ChunkEnvironmentType Environment = ChunkEnvironmentType.None;
 
         public MeshFilter Mesh;
-        public MeshCollider MeshCollider;
 
         Map parentMap;
 
@@ -51,7 +50,6 @@ namespace Assets.Scripts
         public Chunk(Map map, int wx, int wy, int wz, MeshFilter mf, MeshCollider mc)
         {
             Mesh = mf;
-            MeshCollider = mc;
 
             parentMap = map;
             MapX = wx;
@@ -161,7 +159,7 @@ namespace Assets.Scripts
             Mesh.mesh.Optimize();
             Mesh.mesh.RecalculateNormals();
 
-            MeshCollider.sharedMesh = Mesh.mesh;
+            //MeshCollider.sharedMesh = Mesh.mesh;
          
 
 
